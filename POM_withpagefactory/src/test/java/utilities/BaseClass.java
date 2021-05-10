@@ -52,9 +52,5 @@ public class BaseClass {
 		}
 		return input;
 	}
-	public void shot() throws IOException
-	{
-		File f=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(f, new File("C:\\Users\\SHONY\\Desktop\\Shots"));
-	}
+	
 }

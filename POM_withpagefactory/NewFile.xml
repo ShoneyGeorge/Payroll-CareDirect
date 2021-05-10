@@ -2,7 +2,7 @@
 <suite name="Suite">
 
 <!-- Suite -->
-<test name="Test" thread-count="5">
+<test name="Test" thread-count="2" >
 <classes>
 
 <class name="test.CompanyTest"/>

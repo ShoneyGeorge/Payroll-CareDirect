@@ -12,6 +12,8 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.Utility;
+
 public class CompanyPage {
 
 	WebDriver driver;
@@ -42,28 +44,21 @@ public class CompanyPage {
 	@CacheLookup
 	@FindBy(xpath = "//button[text()=\"Save\"]")
 	WebElement save;
-	
+
 	public void CompanyloginDetails(String n, String p) throws InterruptedException, IOException {
 		login.sendKeys(n);
 		password.sendKeys(p);
 		button.click();
-		/*Thread.sleep(3000);
-		company.click();
-		name.clear();
-		name.sendKeys("Obsqura123");
-		mail.clear();
-		mail.sendKeys("shoney@gmail.com");
-		address.clear();
-		address.sendKeys("abc,trivandrum");
-		start.clear();
-		start.sendKeys("22-03-2021");
-		Thread.sleep(3000);
-		save.submit();
-		Thread.sleep(3000);
-		//File f=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-
-		//FileUtils.copyFile(f,new File( "C:\\Users\\SHONY\\Desktop\\Shots"));
-	*/
+		Utility u = new Utility(driver);
+		u.screenShot();
+		/*
+		 * Thread.sleep(3000); company.click(); name.clear();
+		 * name.sendKeys("Obsqura123"); mail.clear(); mail.sendKeys("shoney@gmail.com");
+		 * address.clear(); address.sendKeys("abc,trivandrum"); start.clear();
+		 * start.sendKeys("22-03-2021"); Thread.sleep(3000); save.submit();
+		 * Thread.sleep(3000); //File
+		 
+		 */
 	}
 
 	public CompanyPage(WebDriver driver) {
